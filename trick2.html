@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        body{
+            background: black;
+        }
+        main{
+            width: 400px;
+            height: 200px;
+            margin: 150px auto;
+            position: relative;
+            /* border: 1px solid red; */
+        }
+        h2{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.726);
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 40px;
+            text-transform: uppercase;
+            position: absolute;
+            top: 0;left: 0;
+        }
+        main>div{
+            position: absolute;
+        }
+        main>div:nth-of-type(1){
+            top: 0;
+            left: 0;
+            height: 5px;
+            width: -0;
+            background: linear-gradient(to right ,transparent 10%, white 100%);
+
+        }
+        main:hover div:nth-of-type(1){
+            /* width: 100%; */
+            width: 100%;
+            transition: 1s;
+            }
+         main>div:nth-of-type(2){
+            top: 0;
+            right: 0;
+            height: 0;
+            width: 5px;
+            background: linear-gradient(to bottom,transparent 10%, white 100%);
+        }
+        main:hover div:nth-of-type(2){
+            height: 100%;
+            transition: 1s;
+            transition-delay: .8s;
+        }
+        main>div:nth-of-type(3){
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 5px;
+            background: linear-gradient(to left,transparent 10%, white 100%);
+        }
+        main:hover div:nth-of-type(3){
+            width: 100%;
+            transition: 1s;
+            transition-delay: 1.3s;
+        }
+        main>div:nth-of-type(4){
+            bottom: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: linear-gradient(to top,transparent 10%, white 100%);
+        }
+        main:hover div:nth-of-type(4){
+            height: 100%;
+            transition: 1s;
+            transition-delay: 2s;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Gradient trick</h2>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+</body>
+</html>
